@@ -86,7 +86,7 @@ const Portfolio = () => {
                 />
               </figure>
               <div class="card-body">
-                <h2 class="text-xl font-BebasNeue">Visa Plus</h2>
+                <h2 class="text-xl font-BebasNeue">Lawyer Service</h2>
                 <hr class="border-b-2 border-t-0 mb-4 border-neutral" />
                 <ul class="list-disc text-sm leading-6">
                   <li>Independent service provider website.</li>
