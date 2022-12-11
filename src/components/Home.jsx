@@ -27,7 +27,7 @@ const Home = () => {
               </p>
               <div class="flex">
                 <a
-                  href="https://drive.google.com/file/d/1725_S91ASIS5HuXY5auCcNiGec7t6dJQ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1-_YFUfudpb2ZKspA9HUmmYQHNASOncBn/view?usp=share_link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
