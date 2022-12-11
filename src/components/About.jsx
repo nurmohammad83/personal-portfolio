@@ -1,28 +1,33 @@
 import React from "react";
-
+import hello from '../assets/hello.png'
 const About = () => {
   return (
-    <div
-      name="about"
-      className="w-full  bg-gradient-to-b from-gray-800 to-black text-white"
-    >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-4">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            About
-          </p>
-        </div>
-
-        <p className="text-xl mt-10">
-        I am Nur Mohammad based in Comilla, Bangladesh. I am a passionate Web Developer. I am always enthusiastic about new technologies. My expertise is in frontend development. I love to develop frontend functionalities with React, Javascript, Tailwind, etc. 
-        <br />
-Though I am a technological person, I am confident about my communication skill. Moreover, I love to do teamwork. I consider myself as a quick learner and punctual, dedicated person.
-
-        </p>
-
-        
+    <section class="min-h-screen bg-base-200">
+      <div>
+        <img
+          src={hello}
+          class="max-w-xs block mx-auto"
+          alt="hello"
+        />
       </div>
-    </div>
+      <div class="font-Poppins mx-4 md:mx-32">
+        <p class="text-justify">
+          {" "}
+          I am Nur Mohammad based in Cumilla, Bangladesh. I am a
+          passionate Web Developer. I am always enthusiastic about new
+          technologies. My expertise is in frontend development. I love to
+          develop frontend functionalities with React, Javascript, Tailwind,
+          etc. I am eager about machine learning as its name bombers curiosity
+          to new programmers.
+          <br /> <br />
+          Though I am a technological person, I am confident about my
+          communication skill. Moreover, I love to do teamwork. I consider
+          myself as a quick learner and punctual, dedicated person.
+          <br /> <br />
+          My hobby is watching  Tom & Jerry Carton and reading islamic books.
+        </p>
+      </div>
+    </section>
   );
 };
 

@@ -1,78 +1,61 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
+
 
 const NavBar = () => {
-  const [nav, setNav] = useState(false);
-
-  const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "projects",
-    },
-    {
-      id: 4,
-      link: "experience",
-    },
-    {
-      id: 5,
-      link: "contact",
-    },
-  ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white  bg-black fixed">
-      <div>
-        <h1 className="text-5xl font-signature ml-2">Nur</h1>
-      </div>
-
-      <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-4  cursor-pointer capitalize font-semibold text-white hover:text-orange-500 hover:scale-105 duration-200"
-          >
-            <Link to={link} smooth duration={500}>
-              {link}
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer  capitalize py-2 text-4xl"
-            >
-              <Link
-                onClick={() => setNav(!nav)}
-                to={link}
-                smooth
-                duration={500}
+    <div className="bg-base-200">
+      <nav class="bg-base-200  mx-4 lg:ml-12 lg:mr-12 font-BebasNeue py-4">
+      <div class="navbar bg-white rounded-md">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                {link}
-              </Link>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                ></path>
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a href="/about">About Me</a>
+              </li>
+              <li>
+                <a href="/blog">Blogs</a>
+              </li>
+            </ul>
+          </div>
+          <a
+            class="btn btn-ghost normal-case text-xl font-BebasNeue font-semibold"
+            href="/"
+          >
+            Nur Portfolio
+          </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal p-0">
+            <li>
+              <a href="/about">About Me</a>
             </li>
-          ))}
-        </ul>
-      )}
+            <li>
+              <a href="/blog">Blogs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end"></div>
+      </div>
+    </nav>
     </div>
   );
 };

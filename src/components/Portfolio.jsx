@@ -1,68 +1,115 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import car from "../assets/portfolio/car.png";
 import doctor from "../assets/portfolio/doctor.png";
 import lawyer from "../assets/portfolio/lawyer.png";
 
 const Portfolio = () => {
-  const portfolios = [
-    {
-      id: 1,
-      src: car,
-      link:'https://car-resale-d6efe.web.app/',
-      client:'https://github.com/nurmohammad83/car-resale-client',
-      server:'https://github.com/nurmohammad83/car-resale-server'
-    },
-    {
-      id: 2,
-      src: doctor,
-      link:'https://doctor-protal-cc252.web.app/',
-      client:'https://github.com/nurmohammad83/doctor-portal-client',
-      server:'https://github.com/nurmohammad83/doctor-portal-server'
-    },
-    {
-      id: 3,
-      src: lawyer,
-      link:'https://lawyer-service-cb0ae.web.app/',
-      client:'https://github.com/nurmohammad83/lawyer-client',
-      server:'https://github.com/nurmohammad83/lawyer-server'
-    },
-  ];
 
   return (
-    <div
-      name="projects"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white "
-    >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Portfolio
-          </p>
-          <p className="py-6">Check out some of my work right here</p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src,link ,client,server}) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
-              />
-              <div className="flex items-center justify-between">
-                <a href={link} target='_blank'  className=" bg-orange-500 rounded-md font-semibold p-1 px-2 m-2 text-center  duration-200 hover:scale-105">Live</a>
-                <a href={client} target='_blank' className=" text-center bg-blue-600 rounded-md font-semibold p-1 m-2 duration-200 hover:scale-105">
-                  Client
-                </a>
-                <a href={server} target='_blank' className=" text-center bg-blue-600 rounded-md font-semibold p-1 m-2 duration-200 hover:scale-105">
-                  Server
-                </a>
+    <section className="py-12 min-h-screen">
+      <div class="bg-white w-11/12 mx-auto py-12">
+        <h3 class="text-5xl text-center text-secondary font-BebasNeue pb-12">
+          Projects
+        </h3>
+        <div class="grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-3">
+          <div class="font-Poppins">
+            <div class="card max-w-xs h-[500px] bg-base-100 shadow-xl rounded-md">
+              <figure>
+                <img
+                  src={car}
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-xl font-BebasNeue">Car Resale</h2>
+                <hr class="border-b-2 border-t-0 mb-4 border-neutral" />
+                <ul class="list-disc text-sm leading-6">
+                  <li>Sealer can add a car.</li>
+                  <li>
+                    Upon login/signUp, a jsonwebtoken is issued from the server.
+                  </li>
+                  <li>implemented admin &amp; user level functionalities.</li>
+                </ul>
+                <div class="card-actions justify-end">
+                  <div>
+                    <div>
+                      <Link to='/car'>
+                      <button class="btn btn-primary undefined rounded-sm text-white font-Poppins font-medium tracking-wider">
+                        Details
+                      </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
+          <div class="font-Poppins">
+            <div class="card max-w-xs h-[500px] bg-base-100 shadow-xl rounded-md">
+              <figure>
+                <img
+                  src={doctor}
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-xl font-BebasNeue">Doctor Portal</h2>
+                <hr class="border-b-2 border-t-0 mb-4 border-neutral" />
+                <ul class="list-disc text-sm leading-6">
+                  <li className="">The patient will be able to take an appointment.</li>
+                  <li>
+                  Implemented email-password authentication.
+                  </li>
+                  <li>All vital information is saved in the database</li>
+                </ul>
+                <div class="card-actions justify-end">
+                  <div>
+                    <div>
+                     <Link to='/doctor'>
+                     <button class="btn btn-primary undefined rounded-sm text-white font-Poppins font-medium tracking-wider">
+                        Details
+                      </button>
+                     </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="font-Poppins">
+            <div class="card max-w-xs h-[500px] bg-base-100 shadow-xl rounded-md">
+              <figure>
+                <img
+                  src={lawyer}
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="text-xl font-BebasNeue">Visa Plus</h2>
+                <hr class="border-b-2 border-t-0 mb-4 border-neutral" />
+                <ul class="list-disc text-sm leading-6">
+                  <li>Independent service provider website.</li>
+                  <li>implemented email-password authentication.</li>
+                  <li>Vital information is saved via protected variables.</li>
+                </ul>
+                <div class="card-actions justify-end">
+                  <div>
+                    <div>
+                    <Link to='/lawyer'>
+                    <button class="btn btn-primary undefined rounded-sm text-white font-Poppins font-medium tracking-wider">
+                        Details
+                      </button>
+                    </Link>   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

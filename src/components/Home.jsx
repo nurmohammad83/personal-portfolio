@@ -1,56 +1,63 @@
 import React from "react";
-import HeroImage from "../assets/profile.jpg";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-scroll";
-import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
+
+import Experience from "./Experience";
+import Portfolio from "./Portfolio";
 
 const Home = () => {
   return (
-    <div
-      name="home"
-      className="md:h-screen px-0 p-28 w-full bg-gradient-to-b from-black via-black to-gray-800"
-    >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center md:h-full px-4 md:flex-row">
-        <div className="flex md:w-1/2 flex-col justify-center md:h-full">
-          <h2 className="text-2xl sm:text-4xl font-bold text-white">
-          <Typewriter
-                options={{
-                  strings: ["I'm a Frontend Developer"],
-                  autoStart: true,
-                  loop: true,
-                  pauseFor: 4000,
-                }}
-              />
-          </h2>
-          <p className="text-gray-500 py-2 max-w-md">
-          I am a passionate developer who is always enthusiastic about learning new technologies.
-          </p>
-
-          <div>
-            <a
-              href="https://drive.google.com/file/d/1EatS22omOFd4aREyhJIx_992bNHCI-jU/view?usp=share_link"
-              smooth
-              target='_blank'
-              duration={500}
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
-            >
-              Resume
-              <span className=" duration-300">
-                <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
-              </span>
-            </a>
+    <section className="bg-base-200">
+      <section className="">
+        <div class="grid grid-cols-1 bg-base-200 lg:order-last lg:grid-cols-2 max-w-7xl items-center justify-items-center py-24">
+          <img
+            src="https://i.ibb.co/rk3BJ7J/pngtree-children-s-software-programming-image-2230759.jpg"
+            class="w-80 md:w-2/4 hover:shadow-2xl duration-300 hover:scale-105 rounded-full animate-bounce"
+            alt="avatar"
+          />
+          <div class=" md:max-w-2xl">
+            <div class="w-80 md:w-96 pt-12 lg:pt-2">
+              <h1 class="text-6xl font-BebasNeue">
+                Nur Mohammad
+              </h1>
+              <h2 class="text-2xl font-Poppins">Junior Web Developer</h2>
+              <hr class="border-b-2 border-t-0 pt-2 border-neutral" />
+              <p class="py-6 font-Poppins">
+                I am a passionate developer who is always enthusiastic about
+                learning new technologies.
+              </p>
+              <div class="flex">
+                <a
+                  href="https://drive.google.com/file/d/1725_S91ASIS5HuXY5auCcNiGec7t6dJQ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <button class="btn btn-primary undefined rounded-sm text-white font-Poppins font-medium tracking-wider">
+                      Resume
+                    </button>
+                  </div>
+                </a>
+                <a class="ml-4" href="/contact">
+                  <div>
+                    <Link to='/contact'>
+                    <button class="btn  btn-secondary rounded-sm text-white font-Poppins font-medium tracking-wider">
+                      Contact Me
+                    </button>
+                    </Link>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className="md:w-1/2">
-          <img
-            src={HeroImage}
-            alt="my profile"
-            className="rounded-2xl w-full md:w-2/3"
-          />
-        </div>
-      </div>
-    </div>
+      </section>
+      <section>
+        <Portfolio />
+      </section>
+      <section>
+        <Experience />
+      </section>
+    </section>
   );
 };
 
